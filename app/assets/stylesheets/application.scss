@@ -1,3 +1,36 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ #container{
+   width: 50%;
+   margin: 0 auto;
+   display: grid;
+ }
+
+.navbar img{
+   margin-top: 20px;
+}
+
+li a:hover{
+  color: #fff;
+  border: 2px solid #b3ecff;
+  background-color: #b3ecff;
+}
+
+.space{
+  margin-bottom: 100px;
+}
+
+form{
+  width: 50%;
+}
+
+.right{
+  padding-right: 20px;
+}
+
+.main{
+  display: flex;
+  justify-content: space-between;
+}
