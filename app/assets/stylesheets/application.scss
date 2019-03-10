@@ -2,6 +2,11 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+
+body{
+  margin: 0 auto;
+}
+
  #container{
    width: 50%;
    margin: 0 auto;
