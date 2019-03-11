@@ -2,7 +2,7 @@ class EventsController < ApplicationController
 before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.all
+    @events = current_user.events
   end
 
   def show
@@ -15,7 +15,7 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def create
     @event = Event.new(event_params)
-
+    @event.user = current_user
     if @event.save
       redirect_to @event, notice: "successfully created new Event"
     else
@@ -42,7 +42,7 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
   private
 
   def event_params
-    params.require(:event).permit(:title, :description)
+    params.require(:event).permit(:title, :description, :message)
   end
 
   def find_event

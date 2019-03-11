@@ -5,6 +5,14 @@
   <%= @event.description %>
 </p>
 
+<% if @event.message.attached? %>
+  <p>
+    <strong>Message:</strong>
+    <br>
+    <%= image_tag @event.message %>
+  </p>
+<% end %>
+
 <%= link_to "Back", root_path %>
 <%= link_to "Edit", edit_event_path %>
 <%= link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" } %>
