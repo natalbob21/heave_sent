@@ -1,14 +1,74 @@
 <div class="wrapper">
-  <h1>Timeline</h1>
-  <div class="main">
-    <%= image_tag("txt.png", :alt => "text box", width: "200", height: "200") %>
-    <%= image_tag("vid.png", :alt => "camera frame", width: "200", height: "200") %>
-    <%= image_tag("img.png", :alt => "glowing picture frame", width: "200", height: "200") %>
-    <%= image_tag("txt.png", :alt => "audio player", width: "200", height: "200") %>
-    <%= image_tag("vid.png", :alt => "camera frame", width: "200", height: "200") %>
-    <%= image_tag("img.png", :alt => "glowing picture frame", width: "200", height: "200") %>
-    <%= image_tag("txt.png", :alt => "text box", width: "200", height: "200") %>
-    <%= image_tag("vid.png", :alt => "camera frame", width: "200", height: "200") %>
-  </div>
-  <%= link_to "Back", root_path %>
+  <h1><%=current_user.name %></h1>
+  <figure class="media-left">
+			<p class="image is-64x64">
+				<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name, class: "profile-image") %>
+			</p>
+		</figure>
+  <h1>Welcome <%= current_user.name %> , to your timeline</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<section class="main-timeline-section">
+			    <div class="timeline-start"></div>
+			    <div class="conference-center-line"></div>
+			    <div class="conference-timeline-content">
+
+				    <div class="timeline-article content-right-container">
+				        <div class="content-date">
+			          		<span>20-09-2017</span>
+			        	</div>
+			        	<div class="meta-date"></div>
+				        <div class="content-box">
+				        	<p>Lorem ipsumm ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				        	e magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				        	sit amet.
+				        	</p>
+				        </div>
+				    </div>
+
+				    <div class="timeline-article content-left-container">
+				        <div class="content-date">
+			          		<span>20-09-2017</span>
+			        	</div>
+			        	<div class="meta-date"></div>
+				        <div class="content-box">
+				        	<p>Lorem ipsumm ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				        	e magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				        	sit amet.
+				        	</p>
+				        </div>
+				    </div>
+
+				    <div class="timeline-article content-right-container">
+				        <div class="content-date">
+			          		<span>20-09-2017</span>
+			        	</div>
+			        	<div class="meta-date"></div>
+				        <div class="content-box">
+				        	<p>Lorem ipsumm ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				        	e magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				        	sit amet.
+				        	</p>
+				        </div>
+				    </div>
+
+				    <div class="timeline-article content-left-container">
+				        <div class="content-date">
+			          		<span>20-09-2017</span>
+			        	</div>
+			        	<div class="meta-date"></div>
+				        <div class="content-box">
+				        	<p>Lorem ipsumm ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				        	e magna aliqua. Ut enim ad minim veniam, dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				        	sit amet.
+				        	</p>
+				        </div>
+				    </div>
+
+				</div>
+			   	<div class="timeline-end"></div>
+		  	</section>
+		</div>
+	</div>
 </div>
