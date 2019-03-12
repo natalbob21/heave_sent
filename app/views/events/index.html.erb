@@ -1,28 +1,49 @@
-<div class="text-center" id="container">
-  <%if user_signed_in?%>
-    <%= image_tag("phone.png", :alt => "girl on phone", width: "1000", height: "1000", class: "center-block") %>
-  <% else %>
-    <%= image_tag("family.png", :alt => "family", width: "600", height: "400", class: "center-block") %>
-    <h3>SHARE A MESSAGE, SEND A GIFT</h3>
-      <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
-    <%= image_tag("cell.png", :alt => "family", width: "400", height: "600", class: "center-block") %>
-      <h3>SHARE A TEXT MESSAGE</h3>
-    <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
-    <%= image_tag("phone.png", :alt => "girl on phone", width: "600", height: "400", class: "center-block") %>
-    <h3>SHARE A VOICE MESSAGE</h3>
-    <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
-    <%= image_tag("family.png", :alt => "family", width: "600", height: "400", class: "center-block") %>
-    <h3>SHARE A VIDEO MESSAGE</h3>
-    <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
-    <%= image_tag("timeline.png", :alt => "family", width: "600", height: "400", class: "center-block") %>
-    <h3>view your messages on your timeline</h3>
-    <h1>Support your loved one's with a message. Be their pillar of support in tim</h1>
-    <p>COPYRIGHT © 2019 BTG INC. </p>
-  <% end %>
+<div class="text-center" id=<div class="container">
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<section class="main-timeline-section">
+			    <div class="timeline-start"></div>
+			    <div class="conference-center-line"></div>
+			    <div class="conference-timeline-content">
 
-  <% @events.each do |event| %>
-    <h2>
-      <%= link_to event.title, event  %>
-    </h2>
-  <% end %>
-</div>
+            <%if user_signed_in?%>
+              <%= image_tag("phone.png", :alt => "girl on phone", width: "200", height: "200", class: "profile-image center-block") %>
+              <% @events.each do |event| %>
+                <div class="timeline-article content-right-container">
+                  <div class="content-date">
+                      <span><%= Date.today.to_s %></span>
+                  </div>
+                  <div class="meta-date"></div>
+                  <div class="content-box">
+                    <p>
+                      <%= link_to event.title, event  %><br>
+                      <%= link_to event.description, event  %>
+                    </p>
+                  </div>
+                </div>
+              <% end %>
+            <% else %>
+              <%= image_tag("family.png", :alt => "family", width: "600", height: "400", class: "center-block") %>
+              <h3>SHARE A MESSAGE, SEND A GIFT</h3>
+                <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
+              <%= image_tag("cell.png", :alt => "family", width: "400", height: "600", class: "center-block") %>
+                <h3>SHARE A TEXT MESSAGE</h3>
+              <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
+              <%= image_tag("phone.png", :alt => "girl on phone", width: "600", height: "400", class: "center-block") %>
+              <h3>SHARE A VOICE MESSAGE</h3>
+              <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
+              <%= image_tag("family.png", :alt => "family", width: "600", height: "400", class: "center-block") %>
+              <h3>SHARE A VIDEO MESSAGE</h3>
+              <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
+              <%= image_tag("timeline.png", :alt => "family", width: "600", height: "400", class: "center-block") %>
+              <h3>view your messages on your timeline</h3>
+              <h1>Support your loved one's with a message. Be their pillar of support in tim</h1>
+              <p>COPYRIGHT © 2019 BTG INC. </p>
+            <% end %>
+
+        </div>
+          <div class="timeline-end"></div>
+        </section>
+      </div>
+      </div>
+      </div>

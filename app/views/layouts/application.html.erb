@@ -4,7 +4,9 @@
     <title>BeyondTheGrave</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link rel="icon" href="tomb.png" type="image/x-icon">
+
+    <%= favicon_link_tag asset_path('mic.png'), :rel => 'icon', :type =>  'image/png' %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -19,8 +21,7 @@
         </ul>
         <!-- <h2 class="navbar-brand"><%=link_to "Beyond the Grave", root_path %></h2> -->
         <h3>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item"><%=link_to current_user.name, "/timeline", class: "nav-link" %></li>
+          <ul class="nav navbar-nav navbar-right">            
             <li class="nav-item"><%=link_to "Account", edit_user_registration_path, class: "nav-link" %></li>
             <li class="nav-item"><%=link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
             <li class="right"></li>
