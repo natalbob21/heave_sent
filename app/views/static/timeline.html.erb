@@ -1,5 +1,11 @@
 <div class="wrapper">
-  <h1>Timeline</h1>
+  <figure class="media-left">
+			<p class="image is-64x64">
+				<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name, class: "profile-image") %>
+			</p>
+		</figure>
+  <h1>Welcome <%= current_user.name %> , to your timeline</h1>
+
   <div class="main">
     <%= image_tag("txt.png", :alt => "text box", width: "200", height: "200") %>
     <%= image_tag("vid.png", :alt => "camera frame", width: "200", height: "200") %>
