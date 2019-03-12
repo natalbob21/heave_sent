@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '~> 2.5'
-
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'twilio-ruby'
 gem 'react_on_rails'
 gem 'rails', '~> 5.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
