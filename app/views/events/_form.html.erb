@@ -7,7 +7,7 @@
       prohibited this article from being saved:
       </h2>
       <ul>
-        <% @event.errors.full_message.each do |msg| %>
+        <% @event.errors.full_messages.each do |msg| %>
           <li>
             <%= msg %>
           </li>
@@ -21,13 +21,17 @@
   </div>
   <div class="form-group">
     <%= f.input :description, input_html: { class: 'form-control'} %>
-
   </div>
   <div>
+    <%= f.input :send_date, as: :date, html5: true %>
+  </div>
+
+  <div class="form-group">
     <label> Message </label>
     <%= f.file_field :message %>
     <div class="pad"></div>
   </div>
+
   <div class="form-group">
     <%= f.button :submit, class: "btn btn-primary" %>
   </div>

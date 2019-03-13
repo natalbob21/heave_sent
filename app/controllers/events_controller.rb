@@ -42,7 +42,7 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :message)
+    params.require(:event).permit(:title, :description, :date, :message, :send_date)
   end
 
   def find_event

@@ -17,6 +17,7 @@ body{
    margin-top: 20px;
 }
 
+
 li a:hover{
   color: #fff;
   border: 2px solid #b3ecff;
@@ -152,6 +153,8 @@ main-timeline-section{
     border:10px solid transparent;
     border-left-color:#0093D1;
 }
+
+// MEDIA QUERY
 
 @media (max-width:460px){
     .timeline-article.content-left-container .content-box{
