@@ -12,6 +12,8 @@
   </p>
 <% end %>
 
+<p><%= @event.send_date %></p>
+
 <%= link_to "Back", root_path %>
 <%= link_to "Edit", edit_event_path %>
 <%= link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" } %>
