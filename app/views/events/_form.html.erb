@@ -4,7 +4,7 @@
     <div id="error_explanation">
       <h2>
       <%= pluralize(@event.errors.count, "error") %>
-      prohibited this article from being saved:
+      prohibited this event from being saved:
       </h2>
       <ul>
         <% @event.errors.full_messages.each do |msg| %>
@@ -22,9 +22,21 @@
   <div class="form-group">
     <%= f.input :description, input_html: { class: 'form-control'} %>
   </div>
-  <div>
+  <div class="form-group">
+     <%= f.input :recipient, input_html: { class: 'form-control'} %>
+ </div>
+  <div class="form-group">
     <%= f.input :send_date, as: :date, html5: true %>
   </div>
+  <div class="form-group">
+    <%= f.input :send_time, as: :time, html5: true %>
+  </div>
+  <div class="col-lg-2">
+    <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.all.sort, default: "Easter Time (US & Canada)" %>
+  </div>
+  <div class="form-group">
+     <%= f.input :phone, input_html: { class: 'form-control'} %>
+ </div>
 
   <div class="form-group">
     <label> Message </label>

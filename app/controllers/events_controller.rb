@@ -3,6 +3,9 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
     @events = current_user.events
+    if @events.length.zero?
+      flash[:alert] = 'You have no events. Create one now to get started.'
+    end
   end
 
   def show
