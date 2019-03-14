@@ -25,6 +25,11 @@
       <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
+      <div class="form-group">
+                    <label> Add Profile Image </label>
+                    <%= f.file_field :message %>
+                    <div class="pad"></div>
+                  </div>
     </div>
 
     <div class="form-actions">

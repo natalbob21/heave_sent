@@ -3,6 +3,9 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
     @events = current_user.events
+    if @events.length.zero?
+      flash[:alert] = 'You have no events. Create one now to get started.'
+    end
   end
 
   def show
@@ -42,7 +45,7 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :date, :message, :send_date)
+    params.require(:event).permit(:title, :description, :date, :message, :send_date, :phone, :recipient)
   end
 
   def find_event
