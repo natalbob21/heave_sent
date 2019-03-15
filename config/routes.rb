@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :events
   root "events#index"
   get "/:page" => "static#show"
+
+  resource :calendar, only: [:show]
 end
