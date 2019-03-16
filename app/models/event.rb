@@ -24,10 +24,10 @@ def send_event
 end
 
 
-  def when_to_run
-    minutes_before_event = 30.minutes
-    time - minutes_before_appointment
-  end
-
-  handle_asynchronously :reminder, :run_at => Proc.new { |i| i.when_to_run }
+  # def when_to_run
+  #   minutes_before_event = 30.minutes
+  #   time - minutes_before_appointment
+  # end
+  #
+  # handle_asynchronously :reminder, :run_at => Proc.new { |i| i.when_to_run }
 end

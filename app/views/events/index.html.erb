@@ -1,49 +1,113 @@
-<div class="text-center" id=<div class="container">
-	<div class="row">
-		<div class="col-md-12 col-sm-12 col-xs-12">
-			<section class="main-timeline-section">
-			    <div class="timeline-start"></div>
-			    <div class="conference-center-line"></div>
-			    <div class="conference-timeline-content">
 
-            <%if user_signed_in?%>
-              <%= image_tag("phone.png", :alt => "girl on phone", width: "200", height: "200", class: "profile-image center-block") %>
-              <% @events.each do |event| %>
-                <div class="timeline-article content-right-container">
-                  <div class="content-date">
-                      <span><%= event.send_date.strftime("%Y-%m-%d") %></span>
-                  </div>
-                  <div class="meta-date"></div>
-                  <div class="content-box">
-                    <p>
-                      <%= link_to event.title, event  %><br>
-                      <%= link_to event.description, event %>
-                    </p>
-                  </div>
-                </div>
-              <% end %>
-            <% else %>
-              <%= image_tag("family.png", :alt => "family", width: "600", height: "400", class: "center-block") %>
-              <h3>SHARE A MESSAGE, SEND A GIFT</h3>
-                <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
-              <%= image_tag("cell.png", :alt => "family", width: "400", height: "600", class: "center-block") %>
-                <h3>SHARE A TEXT MESSAGE</h3>
-              <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
-              <%= image_tag("phone.png", :alt => "girl on phone", width: "600", height: "400", class: "center-block") %>
-              <h3>SHARE A VOICE MESSAGE</h3>
-              <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
-              <%= image_tag("family.png", :alt => "family", width: "600", height: "400", class: "center-block") %>
-              <h3>SHARE A VIDEO MESSAGE</h3>
-              <h1>Support your loved one's with a message. Be their pillar of support in times of adversity.</h1>
-              <%= image_tag("timeline.png", :alt => "family", width: "600", height: "400", class: "center-block") %>
-              <h3>view your messages on your timeline</h3>
-              <h1>Support your loved one's with a message. Be their pillar of support in tim</h1>
-              <p>COPYRIGHT © 2019 BTG INC. </p>
-            <% end %>
 
+
+<%if user_signed_in?%>
+<!--  Profile page -->
+	<div class="header"><h1><%=link_to current_user.name, root_path %></h1></div>
+	<div class="text-center" id=<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<section class="main-timeline-section">
+				    <div class="timeline-start"></div>
+				    <div class="conference-center-line"></div>
+				    <div class="conference-timeline-content">
+	              <%= image_tag("phone.png", :alt => "girl on phone", width: "200", height: "200", class: "profile-image center-block") %>
+	              <% @events.each do |event| %>
+	                <div class="timeline-article content-right-container">
+	                  <div class="content-date">
+	                      <span><%= event.send_date.strftime("%Y-%m-%d") %></span>
+	                  </div>
+	                  <div class="meta-date"></div>
+	                  <div class="content-box">
+	                    <p>
+	                      <%= link_to event.title, event  %><br>
+	                      <%= link_to event.description, event %>
+	                    </p>
+	                  </div>
+	                </div>
+	              <% end %>
+	        </div>
+	          <div class="timeline-end"></div>
+	        </section>
+	      </div>
+	    </div>
+	  </div>
+
+<% else %>
+<!-- Landing Page  -->
+<body>
+	<div class="wrapper">
+
+    <div class="nav">
+      <h1 class="landing">Beyond the Gr<span><img src="mic.png" height="25" width="25px"></span>ve</h1>
+    </div>
+
+    <div class="blue">
+      <h2>Imagine a world in which you can send messages to your loved ones in the future, long after you are gone.</h2>
+      <h6>Beyond the Grave is an innovative new app that lets you stay connected to the ones you leave behind. We put the power to stay connected at your finger tips.</h6>
+      <div class="btn btn-primary">
+        Get Started
+      </div>
+    </div>
+
+      <div class="pink">
+        <img src="timeline.png" alt="timeline" width="200" height="200">
+        <h2 class="pink-header">Send a message using our easy to use event creator in 3 easy steps</h2>
+
+        <div class="row">
+          <div class="col">
+            <h3>Click the event creator</h3>
+            <img src="event.png" alt="plus button" width="200" height="200">
+            <p>The events creator button opens up an events form</p>
+          </div>
+          <div class="col">
+            <h3>Fill out the events form</h3>
+            <img src="forms.png" alt="plus button" width="200" height="200">
+            <p>Add title, description, recipient, send date, and your message</p>
+          </div>
+          <div class="col">
+            <h3> Attach your message file</h3>
+            <img src="message.png" alt="plus button" width="200" height="200">
+            <p>You can attached a video, audio or image</p>
+          </div>
         </div>
-          <div class="timeline-end"></div>
-        </section>
+
+        <img src="timeline.png" alt="timeline" width="200" height="200">
+        <h3>What's included?</h3>
       </div>
+
+      <div class="purple">
+        <div class="margin">
+        </div>
+        <div class="border">
+          <h3>You will be able to:</h3>
+          <hr>
+          <p><img src="check.png" alt="checkmark" height="18" width="18">Send a video message</p>
+          <p><img src="check.png" alt="checkmark" height="18" width="18">Send a voice message</p>
+          <p><img src="check.png" alt="checkmark" height="18" width="18">Send a text message</p>
+          <div class="btn btn-primary">
+            Sign up
+          </div>
+        </div>
+        <div class="margin">
+            <h2>Frequently asked questions</h2>
+        </div>
+    </div>
+
+    <div class="yellow">
+      <div class="center">
+        <div class="cue">
+          How much does it cost to signup?
+        </div>
+        <div class="cue">
+          What if the reciever of my message moves?
+        </div>
       </div>
-      </div>
+    </div>
+
+    <div class="footer">
+      <p>COPYRIGHT © 2019 BTG INC. </p>
+    </div>
+  </div>
+</body>
+<% end %>
