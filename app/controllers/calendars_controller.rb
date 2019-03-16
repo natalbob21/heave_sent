@@ -5,8 +5,8 @@ class CalendarsController < ApplicationController
       format.json do
         start_date  = Date.parse(params[:start_date])
         end_date    = Date.parse(params[:end_date])
-        tasks       = current_user.tasks.between(start_date, end_date).ordered
-        render json: tasks.group_by{ |task| task.due_date }
+        tasks       = current_user.events.between(start_date, end_date).ordered
+        render json: events.group_by{ |event| event.send_date }
       end
     end
   end
