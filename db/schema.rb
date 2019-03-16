@@ -36,21 +36,6 @@ ActiveRecord::Schema.define(version: 2019_03_19_014618) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "delayed_jobs", force: :cascade do |t|
-    t.integer "priority", default: 0, null: false
-    t.integer "attempts", default: 0, null: false
-    t.text "handler", null: false
-    t.text "last_error"
-    t.datetime "run_at"
-    t.datetime "locked_at"
-    t.datetime "failed_at"
-    t.string "locked_by"
-    t.string "queue"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["priority", "run_at"], name: "delayed_jobs_priority"
-  end
-
   create_table "events", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -58,8 +43,9 @@ ActiveRecord::Schema.define(version: 2019_03_19_014618) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "send_date", null: false
-    t.string "phone", null: false
-    t.string "recipient", null: false
+    t.string "phone"
+    t.string "recipient"
+    t.time "time_zone"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
