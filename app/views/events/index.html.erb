@@ -8,7 +8,9 @@
 				    <div class="timeline-start"></div>
 				    <div class="conference-center-line"></div>
 				    <div class="conference-timeline-content">
-	              <%= image_tag("phone.png", :alt => "girl on phone", width: "200", height: "200", class: "profile-image center-block") %>
+							<% if current_user.avatar.attached? %>
+	              <%= image_tag current_user.avatar, class: "rounded-circle" %>
+							<% end %>
 	              <% @events.each do |event| %>
 	                <div class="timeline-article content-right-container">
 	                  <div class="content-date">

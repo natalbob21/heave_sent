@@ -5,6 +5,7 @@ ruby '~> 2.5'
 
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'twilio-ruby'
+gem 'carrierwave'
 gem 'react_on_rails'
 gem 'rails', '~> 5.2.1'
 gem 'pg', '>= 0.18', '< 2.0'

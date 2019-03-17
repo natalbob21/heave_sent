@@ -8,7 +8,9 @@
     <%= favicon_link_tag asset_path('mic.png'), :rel => 'icon', :type =>  'image/png' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_pack_tag 'app-bundle' %>
   </head>
 
   <body>

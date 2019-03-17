@@ -8,7 +8,9 @@
     <div class="form-group">
       <div class="row">
         <div class="col-sm-4">
-          <%= image_tag @user.avatar, class: "rounded-circle" %>
+          <% if @user.avatar.attached? %>
+            <%= image_tag @user.avatar, class: "rounded-circle" %>
+          <% end %>
         </div>
 
         <div class="col-sm-8">
