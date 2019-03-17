@@ -5,6 +5,17 @@
     <%= f.error_notification %>
 
 
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-4">
+          <%= image_tag user_avatar(resource, 100), class: "rounded-circle" %>
+        </div>
+
+        <div class="col-sm-8">
+          <%= f.file_field :avatar %>
+        </div>
+      </div>
+
     <div class="form-inputs">
       <%= f.input :name, required: true, autofocus: true, input_html: { class: "input"}, wrapper: false, label_html: { class: "name" } %>
 

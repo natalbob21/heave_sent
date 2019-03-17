@@ -15,13 +15,13 @@
 <h2>You have successfully created an Event<br>Your message will be sent to <%= @event.recipient %> on <%= @event.send_date %></h2>
 
 <tr>
-        <td><%= @event.id %></td><br>
-        <td><%= @event.phone %></td><br>
-        <td><%= @event.send_date %></td><br>
-        <td><%= @event.created_at %></td><br>
-        <td>
-          <%= link_to "Back", root_path %>
-          <%= link_to "Edit", edit_event_path %>
-          <%= link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" } %>
-        </td>
-      </tr>
+  <td><%= @event.id %></td><br>
+  <td><%= @event.phone %></td><br>
+  <td><%= @event.send_date %></td><br>
+  <td><%= @event.created_at %></td><br>
+  <td>
+    <%= link_to "Back", root_path %>
+    <%= link_to "Edit", edit_event_path %>
+    <%= link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" } %>
+  </td>
+</tr>
