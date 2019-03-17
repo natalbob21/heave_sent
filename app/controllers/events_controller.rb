@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-before_action :find_event, only: [:show, :edit, :update, :destroy]
+  before_action :find_event, only: [:show, :edit, :update, :destroy]
 
   def index
     @events = current_user.events
@@ -45,7 +45,7 @@ before_action :find_event, only: [:show, :edit, :update, :destroy]
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :date, :message, :send_date, :phone, :recipient)
+    params.require(:event).permit(:title, :description, :date, :message, :send_date, :phone, :recipient, :video)
   end
 
   def find_event
