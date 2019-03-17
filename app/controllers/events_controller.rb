@@ -45,7 +45,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :date, :message, :send_date, :phone, :recipient)
+    params.require(:event).permit(:title, :description, :date, :message, :send_date, :phone, :recipient, :video)
   end
 
   def find_event

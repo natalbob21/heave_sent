@@ -1,29 +1,23 @@
 class Event < ApplicationRecord
   has_one_attached :message
-  has_one_attached :audio
-  has_one_attached :video
-  
+  mount_uploader :video, VideoUploader  
   belongs_to :user
   validates :title, :description, :send_date, :phone, :recipient, presence: true
 
-  after_create :reminder
+  after_create :send_event
 
 # Notify our appointment attendee X minutes before the appointment time
 
+
 def send_event
-    account_sid = ENV['TWILIO_ACCOUNT_SID']
-    auth_token = ENV['TWILIO_AUTH_TOKEN']
-    client = Twilio::REST::Client.new(account_sid, auth_token)
-    time_str = self.send_date.to_s
-
-    from = ENV['TWILIO_NUMBER'] # Your Twilio number
-    to = self.phone # Your mobile phone number
-
-    client.messages.create(
-    from: from,
-    to: to,
-    body: "Hey friend!"
-    )
+  account_sid =  ENV['TWILIO_ACCOUNT_SID']
+  auth_token = ENV['TWILIO_AUTH_TOKEN']
+  @client = Twilio::REST::Client.new(account_sid, auth_token)
+  @message = @client.messages.create(
+   to: "+19546732891",
+   from: ENV['TWILIO_NUMBER'],
+   body: "Hello, it works!"
+)
 end
 
   # def when_to_run

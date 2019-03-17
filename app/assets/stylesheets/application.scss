@@ -1,68 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 // Main Styles
-body{
+body {
   margin: 0 auto;
 }
 
- #container{
-   width: 50%;
-   margin: 0 auto;
-   display: grid;
- }
+#container {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+}
 
 // Header
-.navbar img{
-   margin-top: 20px;
+.navbar img {
+  margin-top: 20px;
 }
 
-.navbar-brand{
-  padding: 11px
+.navbar-brand {
+  padding: 11px;
 }
 
-li a:hover{
+li a:hover {
   color: #fff;
   border: 2px solid #b3ecff;
   background-color: #b3ecff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-  .header {
-    padding-top: 24px;
-    text-align: center;
-  }
+.header {
+  padding-top: 24px;
+  text-align: center;
+}
 
 // Forms
 
-.space{
+.space {
   margin-bottom: 100px;
 }
 
-.pad{
+.pad {
   margin-bottom: 30px;
 }
 
-
-form{
+form {
   width: 50%;
 }
 
-.right{
+.right {
   padding-right: 20px;
 }
 
 .profile-image {
-    margin-top: 50px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid white;
-    transition: all .5s;
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all 0.5s;
 }
-.main{
+.main {
   display: flex;
   justify-content: space-between;
 }
@@ -77,105 +90,104 @@ form{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 // Timeline Styles
 
-main-timeline-section{
-    position: relative;
-    width: 100%;
-    margin:auto;
+main-timeline-section {
+  position: relative;
+  width: 100%;
+  margin: auto;
 }
 .profile-image {
-    margin-top: 50px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid #0093D1;
-    transition: all .5s;
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #0093d1;
+  transition: all 0.5s;
 }
 .main-timeline-section .timeline-start,
 .main-timeline-section .timeline-end {
-    background: #0093D1;
-    border-radius:100px;
-    margin: 0 auto;
-    width:30px;
-    height:30px;
+  background: #0093d1;
+  border-radius: 100px;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
 }
 .main-timeline-section .conference-center-line {
-    position: absolute;
-    width: 4px;
-    height:100%;
-    top: 0;
-    left:50%;
-    margin-left: -2px;
-    background:#0093D1;
-    z-index: -1;
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: -2px;
+  background: #0093d1;
+  z-index: -1;
 }
-.timeline-article{
-    width:100%;
-    position:relative;
-    margin:40px 0px;
-    min-height: 135px;
-    z-index: 0;
+.timeline-article {
+  width: 100%;
+  position: relative;
+  margin: 40px 0px;
+  min-height: 135px;
+  z-index: 0;
 }
-.timeline-article .content-date{
-    position: absolute;
-    top:33%;
-    left:50%;
-    font-size:18px;
-    margin-left: -150px;
-    transform: translateY(50%);
+.timeline-article .content-date {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  font-size: 18px;
+  margin-left: -150px;
+  transform: translateY(50%);
 }
 .timeline-article .meta-date {
-    position: absolute;
-    top:50%;
-    left: 50%;
-    width:20px;
-    height:20px;
-    transform: translateY(-50%);
-    margin-left: -11px;
-    border-radius: 100%;
-    background:#fff;
-    border:1px solid #0093D1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  margin-left: -11px;
+  border-radius: 100%;
+  background: #fff;
+  border: 1px solid #0093d1;
 }
-.timeline-article .content-box{
-    position:absolute;
-    box-shadow: 2px 2px 4px 0px #c1c1c1;
-    border:1px solid #0093D1;
-    border-radius: 5px;
-    background-color: #fff;
-    width:40%;
-    top:50%;
-    transform: translateY(-50%);
-    padding:8px;
-    left:50%;
-    margin-left:50px;
+.timeline-article .content-box {
+  position: absolute;
+  box-shadow: 2px 2px 4px 0px #c1c1c1;
+  border: 1px solid #0093d1;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 8px;
+  left: 50%;
+  margin-left: 50px;
 }
-.content-left-container .content-box{
-    left:5%;
-    margin-left: 0px;
+.content-left-container .content-box {
+  left: 5%;
+  margin-left: 0px;
 }
-.content-left-container .content-date{
-    margin-left: 50px;
+.content-left-container .content-date {
+  margin-left: 50px;
 }
-.content-right-container .content-box:before{
-    content: " ";
-    position:absolute;
-    left:-10px;
-    top:40%;
-    transform: translateX(-50%);
-    border:10px solid transparent;
-    border-right-color:#0093D1;
-    display:block;
+.content-right-container .content-box:before {
+  content: " ";
+  position: absolute;
+  left: -10px;
+  top: 40%;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-right-color: #0093d1;
+  display: block;
 }
-.content-left-container .content-box:before{
-    content: " ";
-    position:absolute;
-    top:40%;
-    right:-30px;
-    transform: translateX(-50%);
-    border:10px solid transparent;
-    border-left-color:#0093D1;
+.content-left-container .content-box:before {
+  content: " ";
+  position: absolute;
+  top: 40%;
+  right: -30px;
+  transform: translateX(-50%);
+  border: 10px solid transparent;
+  border-left-color: #0093d1;
 }
 
 //LANDING
@@ -188,9 +200,9 @@ main-timeline-section{
 }
 
 /* Main Header row 1 */
-.nav{
+.nav {
   text-align: center;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 .blue {
@@ -198,38 +210,42 @@ main-timeline-section{
   background-repeat: no-repeat;
   background-size: 100% 100%; */
   text-align: center;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 36px;
   padding: 30px;
 }
 
-.blue h2{
-  color: #0093D1;
+.blue h2 {
+  color: #0093d1;
   font-size: 36px;
   margin-top: 48px;
   margin-bottom: 24px;
   font-weight: 700;
 }
 
-.blue h6{
-  color: #0093D1;
+.blue h6 {
+  color: #0093d1;
   font-size: 18px;
   margin-top: 24px;
   margin-bottom: 12px;
   font-weight: 700;
 }
 
-.blue .btn{
+.blue .btn {
   padding: 15px;
   font-size: 24px;
   margin-top: 24px;
   margin-bottom: 70px;
 }
 
+div.btn.btn-primary a {
+  color: white;
+}
+
 /* Main Header row 2 */
 
-.pink{
+.pink {
   /* background-image: url(wall.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%; */
@@ -239,12 +255,12 @@ main-timeline-section{
 }
 
 .pink-header {
-  color: #0093D1;
-  font-family: 'Roboto Slab', serif;
+  color: #0093d1;
+  font-family: "Roboto Slab", serif;
   font-weight: 700px;
   font-size: 36px;
   margin: 0 auto 72px auto;
-  width: 80%
+  width: 80%;
 }
 
 .row {
@@ -256,7 +272,7 @@ main-timeline-section{
 
 .col {
   max-width: 50%;
-  border: 1px solid #0093D1;
+  border: 1px solid #0093d1;
   border-radius: 5px;
   padding: 10px;
   width: 350px;
@@ -264,52 +280,51 @@ main-timeline-section{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.col h3, p {
-  color: #0093D1;
-  font-family: 'Roboto Slab', serif;
+.col h3,
+p {
+  color: #0093d1;
+  font-family: "Roboto Slab", serif;
   font-weight: 700px;
 }
 
 .pink h3 {
-    color: #0093D1;
-    font-family: 'Roboto Slab', serif;
-    font-weight: 700px;
-    font-size: 36px;
-    margin-bottom: 36px;
+  color: #0093d1;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700px;
+  font-size: 36px;
+  margin-bottom: 36px;
 }
 
 /* Main Header Row 3 */
-.purple{
+.purple {
   /* background-image: url(wall.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%; */
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 700px;
   font-size: 24px;
-  color: #0093D1;
+  color: #0093d1;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 .margin {
   margin-top: 36px;
 }
 
-.border{
-      color: #0093D1;
-      font-family: 'Roboto Slab', serif;
-      font-weight: 700px;
-      border: 1px solid #0093D1;
-      border-radius: 5px;
-      width: 350px;
-      margin: 0 auto;
-      padding: 20px;
+.border {
+  color: #0093d1;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700px;
+  border: 1px solid #0093d1;
+  border-radius: 5px;
+  width: 350px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-
 /* Main Header Row 4  */
-.yellow{
+.yellow {
   /* background-image: url(wall.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%; */
@@ -326,10 +341,10 @@ main-timeline-section{
   margin: auto;
   margin-bottom: 30px;
   width: 70%;
-  border: 1px solid #0093D1;
+  border: 1px solid #0093d1;
   border-radius: 5px;
-  color: #0093D1;
-  font-family: 'Roboto Slab', serif;
+  color: #0093d1;
+  font-family: "Roboto Slab", serif;
   font-weight: 700px;
   font-size: 18px;
 }
@@ -340,7 +355,6 @@ main-timeline-section{
   padding: 10px;
 }
 
-
 /*  Footer */
 .footer {
   background-color: #33475b;
@@ -348,23 +362,20 @@ main-timeline-section{
 }
 
 .footer p {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 400px;
   color: #fff;
   text-align: center;
 }
 
-
-
 // MEDIA QUERY
 
-@media (max-width:460px){
-    .timeline-article.content-left-container .content-box{
-        left: -10px;
-    }
-    .timeline-article .content-box p{
-        height: 100px;
-        overflow: hidden;
-    }
-
+@media (max-width: 460px) {
+  .timeline-article.content-left-container .content-box {
+    left: -10px;
+  }
+  .timeline-article .content-box p {
+    height: 100px;
+    overflow: hidden;
+  }
 }

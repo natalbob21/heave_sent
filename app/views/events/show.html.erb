@@ -12,6 +12,8 @@
   </p>
 <% end %>
 
+  <%= video_tag @event.video_url.to_s, controls: true  %>
+
 <h2>You have successfully created an Event<br>Your message will be sent to <%= @event.recipient %> on <%= @event.send_date %></h2>
 
 <tr>
