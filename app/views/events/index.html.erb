@@ -1,31 +1,31 @@
 
 
 <div class="header"><h1><%=link_to current_user.name, root_path %></h1></div>
-<div class="text-center" id=<div class="container">
-	<div class="row">
-		<div class="col-md-12 col-sm-12 col-xs-12">
-			<section class="main-timeline-section">
-			    <div class="timeline-start"></div>
-			    <div class="conference-center-line"></div>
-			    <div class="conference-timeline-content">
-              <%= image_tag user_avatar(current_user, 200), class: "rounded-circle" %>
-              <% @events.each do |event| %>
-                <div class="timeline-article content-right-container">
-                  <div class="content-date">
-                      <span><%= event.send_date.strftime("%Y-%m-%d") %></span>
-                  </div>
-                  <div class="meta-date"></div>
-                  <div class="content-box">
-                    <p>
-                      <%= link_to event.title, event  %><br>
-                      <%= link_to event.description, event %>
-                    </p>
-                  </div>
-                </div>
-              <% end %>
-        </div>
-          <div class="timeline-end"></div>
-        </section>
-      </div>
-      </div>
-      </div>
+	<div class="text-center" id=<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<section class="main-timeline-section">
+				    <div class="timeline-start"></div>
+				    <div class="conference-center-line"></div>
+				    <div class="conference-timeline-content">
+	              <%= image_tag("phone.png", :alt => "girl on phone", width: "200", height: "200", class: "profile-image center-block") %>
+	              <% @events.each do |event| %>
+	                <div class="timeline-article content-right-container">
+	                  <div class="content-date">
+	                      <span><%= event.send_date.strftime("%Y-%m-%d") %></span>
+	                  </div>
+	                  <div class="meta-date"></div>
+	                  <div class="content-box">
+	                    <p>
+	                      <%= link_to event.title, event  %><br>
+	                      <%= link_to event.description, event %>
+	                    </p>
+	                  </div>
+	                </div>
+	              <% end %>
+	        </div>
+	          <div class="timeline-end"></div>
+	        </section>
+      	</div>
+     </div>
+  </div>

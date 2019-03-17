@@ -9,7 +9,7 @@
       <h2>Imagine a world in which you can send messages to your loved ones in the future, long after you are gone.</h2>
       <h6>Beyond the Grave is an innovative new app that lets you stay connected to the ones you leave behind. We put the power to stay connected at your finger tips.</h6>
       <div class="btn btn-primary">
-        Get Started
+        <%= link_to "Get Started", new_user_registration_path %>
       </div>
     </div>
 
@@ -48,7 +48,7 @@
           <p><%=image_tag("check.png",  :alt => "checkmark", width: "18", height: "18") %>Send a voice message</p>
           <p><%=image_tag("check.png",  :alt => "checkmark", width: "18", height: "18") %>Send a text message</p>
           <div class="btn btn-primary">
-            Sign up
+            <%= link_to "Sign up", new_user_registration_path %>
           </div>
         </div>
         <div class="margin">
