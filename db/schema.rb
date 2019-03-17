@@ -58,6 +58,8 @@ ActiveRecord::Schema.define(version: 2019_03_19_014618) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "send_date", null: false
+    t.string "phone"
+    t.string "recipient"
     t.string "phone", null: false
     t.string "recipient", null: false
     t.index ["user_id"], name: "index_events_on_user_id"
