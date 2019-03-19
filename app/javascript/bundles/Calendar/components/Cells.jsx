@@ -1,6 +1,6 @@
 import React from "react";
 import dateFns from "date-fns";
-import Cell from "./cell";
+import Cell from "./Cell";
 
 const Cells = props => {
   const monthStart = dateFns.startOfMonth(props.currentMonth);
