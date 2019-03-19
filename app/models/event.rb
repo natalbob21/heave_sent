@@ -14,7 +14,7 @@ def send_event
   auth_token = ENV['TWILIO_AUTH_TOKEN']
   @client = Twilio::REST::Client.new(account_sid, auth_token)
   @message = @client.messages.create(
-   to: "+19546732891",
+   to: ENV['PERSONAL_PHONE_NUMBER'],
    from: ENV['TWILIO_NUMBER'],
    body: "Hello, it works!"
 )
