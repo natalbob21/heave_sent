@@ -34,9 +34,7 @@
 
         <h3>
           <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item <%= controller_name == 'calendars' ?    'active' : '' %>">
-              <%= link_to "Calendar", calendar_path, class: "nav-link" %>
-            </li>
+          
             <li class="nav-item"><%=link_to "Account", edit_user_registration_path, class: "nav-link" %></li>
             <li class="nav-item"><%=link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
             <li class="right"></li>
@@ -47,7 +45,7 @@
 
         <ul class="nav navbar-nav navbar-left">
           <li class="nav-item"><%=link_to image_tag("https://static-beyond.herokuapp.com/home.png", tag: "home", width: "30", height: "30"), root_path, class: "nav-link active" %></li>
-          <li class="nav-item navbar-brand"><h2><%=link_to "Beyond the Grave", root_path %></h2></li>
+          <li class="nav-item navbar-brand"><h2><%=link_to "Heaven Sent", root_path %></h2></li>
         </ul>
         <h3>
           <ul class="nav navbar-nav navbar-right">

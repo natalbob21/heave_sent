@@ -25,7 +25,47 @@ body {
 .navbar-fixed-top, .navbar-fixed-bottom {
   margin-bottom: 0;
 }
+.Background{
+  background: url(background.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
+}
+.Background-text{
+  background-color: rgba(255, 255, 255, 0.5);
+  text-decoration-color: rgb(255, 255, 255);
+  // width: 90%;
+  // margin: auto;
+}
+.container-one {
+  width: 500px;
+  clear: both;
+  text-align: center;
+}
+
+.container-one input {
+  display: inline-block;
+  width: 100%;
+  clear: both;
+  margin: 10px auto;
+  max-width: 400px;
+}
+.container-one textarea {
+  display: inline-block;
+  width: 100%;
+  border:1px solid #999999;
+  margin: 10px auto;
+  max-width: 400px;
+  padding:3px;
+}
+// .form-inputs{
+//   width: 90%;
+//   padding:  auto;
+//   margin: auto;
+//
+// }
 
 #container {
   width: 50%;
@@ -64,9 +104,7 @@ li a:hover {
   margin-bottom: 30px;
 }
 
-form {
-  width: 50%;
-}
+
 
 .right {
   padding-right: 20px;
@@ -88,7 +126,7 @@ form {
 // Event Creator
 .center {
   margin: auto;
-  width: 50%;
+  width: 40%;
   padding: 10px;
   border-radius: 5px;
 }
