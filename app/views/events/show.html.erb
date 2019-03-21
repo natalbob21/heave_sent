@@ -5,11 +5,13 @@
   <%= @event.description %>
 </p>
 <% if @event.message.attached? %>
+
   <p>
     <strong>Message:</strong>
     <br>
     <%= image_tag @event.message %>
   </p>
+
 <% end %>
 
 

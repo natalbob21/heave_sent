@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
   has_one_attached :message
-  mount_uploader :video, VideoUploader  
+  mount_uploader :video, VideoUploader
   belongs_to :user
   belongs_to :recipient
   validates :title, :description, :send_date, :recipient_id, presence: true
@@ -23,7 +23,6 @@ def send_event
    body: "Hello, #{recipient.name}!.  #{user.email} sent you a message from Beyond the Grave...  To view it, click here: #{Rails.env.development? ? 'http://localhost:3000' : 'https://' + ENV['HOST_URL']}/public_events/#{self.uuid}."
 )
 end
-
   # def when_to_run
   #   minutes_before_event = 30.minutes
   #   time - minutes_before_appointment
