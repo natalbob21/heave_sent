@@ -4,13 +4,22 @@
     <title>BeyondTheGrave</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= favicon_link_tag asset_path('mic.png'), :rel => 'icon', :type =>  'image/png' %>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="http://blackrockdigital.github.io/startbootstrap-grayscale/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="http://blackrockdigital.github.io/startbootstrap-grayscale/css/grayscale.min.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-      <%= javascript_pack_tag 'app-bundle' %>
+    <%= javascript_pack_tag 'app-bundle' %>
   </head>
 
   <body>
@@ -49,9 +58,6 @@
         </h3>
 
       <%end%>
-
-    </div>
-    <div class="space">
 
     </div>
     <%= yield %>
