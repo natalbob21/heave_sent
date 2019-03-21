@@ -9,7 +9,6 @@ class EventsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -45,7 +44,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :description, :date, :message, :send_date, :phone, :recipient, :video)
+    params.require(:event).permit(:title, :description, :date, :message, :send_date, :recipient_id, :video)
   end
 
   def find_event

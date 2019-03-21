@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_19_014619) do
+ActiveRecord::Schema.define(version: 2019_03_21_203950) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -43,11 +45,21 @@ ActiveRecord::Schema.define(version: 2019_03_19_014619) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "send_date", null: false
-    t.string "phone"
-    t.string "recipient"
-    t.time "time_zone"
     t.string "video"
+    t.bigint "recipient_id"
+    t.datetime "sent_at"
+    t.uuid "uuid"
+    t.index ["recipient_id"], name: "index_events_on_recipient_id"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "recipients", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name", null: false
+    t.string "phone", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_recipients_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,5 +77,6 @@ ActiveRecord::Schema.define(version: 2019_03_19_014619) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "events", "recipients"
   add_foreign_key "events", "users"
 end

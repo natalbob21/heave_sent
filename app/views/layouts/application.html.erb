@@ -29,6 +29,7 @@
         <ul class="nav navbar-nav navbar-left">
           <li class="nav-item"><%=link_to image_tag("https://static-beyond.herokuapp.com/home.png", tag: "home", width: "30", height: "30"), root_path, class: "nav-link active" %></li>
           <li class="nav-item"><%=link_to image_tag("https://static-beyond.herokuapp.com/event.png", tag: "event", width: "30", height: "30"), new_event_path, class: "nav-link" %></li>
+          <li class="nav-item"><%=link_to image_tag("https://static-beyond.herokuapp.com/add_recipient.jpeg", tag: "recipient", width: "30", height: "30"), new_recipient_path, class: "nav-link" %></li>
           <li class="navbar-brand"><h1>Welcome, <%=link_to current_user.name, root_path %></h1></li>
         </ul>
 

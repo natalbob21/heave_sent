@@ -1,0 +1,30 @@
+<%= simple_form_for @recipient, html: { multipart: true } do |f| %>
+
+  <% if @recipient.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+      <%= pluralize(@recipient.errors.count, "error") %>
+      prohibited this recipient from being saved:
+      </h2>
+      <ul>
+        <% @recipient.errors.full_messages.each do |msg| %>
+          <li>
+            <%= msg %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-inputs">
+      <%= f.input :name, input_html: { class: 'form-control' } %>
+      <%= f.input :phone, input_html: { class: 'form-control'} %>
+      <div class="form-group">
+        <div class="pad"></div>
+      </div>
+      <div class="form-group">
+        <%= f.button :submit, class: "btn btn-primary" %>
+      </div>
+
+  </div>
+<% end %>

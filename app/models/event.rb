@@ -2,21 +2,25 @@ class Event < ApplicationRecord
   has_one_attached :message
   mount_uploader :video, VideoUploader
   belongs_to :user
-  validates :title, :description, :send_date, :phone, :recipient, presence: true
-
-  # after_create :send_event
+  belongs_to :recipient
+  validates :title, :description, :send_date, :recipient_id, presence: true
+  before_create :assign_uuid
+  #after_create :send_event
 
 # Notify our appointment attendee X minutes before the appointment time
 
+def assign_uuid
+  self.uuid = SecureRandom.uuid
+end
 
 def send_event
   account_sid =  ENV['TWILIO_ACCOUNT_SID']
   auth_token = ENV['TWILIO_AUTH_TOKEN']
   @client = Twilio::REST::Client.new(account_sid, auth_token)
   @message = @client.messages.create(
-   to: ENV['PERSONAL_PHONE_NUMBER'],
+   to: "+1#{recipient.phone}",
    from: ENV['TWILIO_NUMBER'],
-   body: "Hello, it works!"
+   body: "Hello, #{recipient.name}!.  #{user.email} sent you a message from Beyond the Grave...  To view it, click here: #{Rails.env.development? ? 'http://localhost:3000' : 'https://' + ENV['HOST_URL']}/public_events/#{self.uuid}."
 )
 end
   # def when_to_run
