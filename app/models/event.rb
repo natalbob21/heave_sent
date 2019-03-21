@@ -1,10 +1,10 @@
 class Event < ApplicationRecord
   has_one_attached :message
-  mount_uploader :video, VideoUploader  
+  mount_uploader :video, VideoUploader
   belongs_to :user
   validates :title, :description, :send_date, :phone, :recipient, presence: true
 
-  after_create :send_event
+  # after_create :send_event
 
 # Notify our appointment attendee X minutes before the appointment time
 
@@ -19,7 +19,6 @@ def send_event
    body: "Hello, it works!"
 )
 end
-
   # def when_to_run
   #   minutes_before_event = 30.minutes
   #   time - minutes_before_appointment
