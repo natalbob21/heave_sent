@@ -1,6 +1,7 @@
-<div class="left"><h3><%=link_to 'My Recipients', recipients_path %></h3></div>
 
-<div class="header"><h1><%=link_to current_user.name, root_path %></h1></div>
+
+
+<div class="header"><h1><%= @recipient.name %></h1></div>
 	<div class="text-center" id=<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
@@ -8,10 +9,7 @@
 				    <div class="timeline-start"></div>
 				    <div class="conference-center-line"></div>
 				    <div class="conference-timeline-content">
-							<% if current_user.avatar.attached? %>
-	              <%= image_tag current_user.avatar, class: "profile-image" %>
-							<% end %>
-	              <% @events.each do |event| %>
+	              <% @recipient.events.each do |event| %>
 	                <div class="timeline-article content-right-container">
 	                  <div class="content-date">
 	                      <span><%= event.send_date.strftime("%Y-%m-%d") %></span>

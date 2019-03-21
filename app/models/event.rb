@@ -2,9 +2,10 @@ class Event < ApplicationRecord
   has_one_attached :message
   mount_uploader :video, VideoUploader  
   belongs_to :user
-  validates :title, :description, :send_date, :phone, :recipient, presence: true
+  belongs_to :recipient
+  validates :title, :description, :send_date, :recipient_id, presence: true
 
-  after_create :send_event
+  #after_create :send_event
 
 # Notify our appointment attendee X minutes before the appointment time
 

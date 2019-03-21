@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_19_014619) do
+ActiveRecord::Schema.define(version: 2019_03_20_030112) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,10 +58,19 @@ ActiveRecord::Schema.define(version: 2019_03_19_014619) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date "send_date", null: false
-    t.string "phone", null: false
-    t.string "recipient", null: false
     t.string "video"
+    t.bigint "recipient_id"
+    t.index ["recipient_id"], name: "index_events_on_recipient_id"
     t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "recipients", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "name", null: false
+    t.string "phone", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_recipients_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -79,5 +88,6 @@ ActiveRecord::Schema.define(version: 2019_03_19_014619) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "events", "recipients"
   add_foreign_key "events", "users"
 end
