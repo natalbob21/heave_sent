@@ -1,0 +1,18 @@
+<h1>Welcome, <%= @event.recipient.name %></h1>
+<h1>
+  <%= @event.title %>
+</h1>
+<p>
+  <%= @event.description %>
+</p>
+<% if @event.message.attached? %>
+  <p>
+    <strong>Message:</strong>
+    <br>
+    <%= image_tag @event.message %>
+  </p>
+<% end %>
+
+<% if @event.video.present? %>
+    <%= video_tag @event.video_url.to_s, controls: true  %>
+<% end %>

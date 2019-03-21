@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_20_030112) do
+ActiveRecord::Schema.define(version: 2019_03_21_203950) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "pgcrypto"
   enable_extension "plpgsql"
+  enable_extension "uuid-ossp"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -60,6 +62,8 @@ ActiveRecord::Schema.define(version: 2019_03_20_030112) do
     t.date "send_date", null: false
     t.string "video"
     t.bigint "recipient_id"
+    t.datetime "sent_at"
+    t.uuid "uuid"
     t.index ["recipient_id"], name: "index_events_on_recipient_id"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
