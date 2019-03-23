@@ -40,6 +40,7 @@ body {
 
 .navbar-brand {
   padding: 11px;
+  margin-top: 7px;
 }
 
 li a:hover {
@@ -237,6 +238,11 @@ article#one, .two h3, {
 
 .two {
   background-color: #fff;
+}
+
+a.sign {
+  color: #fff;
+  text-decoration: none;
 }
 
 .three {
