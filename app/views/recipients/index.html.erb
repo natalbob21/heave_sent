@@ -1,28 +1,22 @@
-
-<h1>List of Recipients</h1>
- 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Phone</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
- 
-  <tbody>
+<div class="container2">
+  <h2 class="class-h">My Recipients</h2>
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col2 col-1">Name</div>
+      <div class="col2 col-2">Phone</div>
+      <div class="col col-3"></div>
+      <div class="col col-4"></div>
+    </li>
     <% @recipients.each do |recipient| %>
-      <tr>
-        <td><%= recipient.name %></td>
-        <td><%= recipient.phone %></td>
-        <td><%= link_to "View", recipient %></td>
-        <td><%= link_to "Edit", edit_recipient_path(recipient) %></td>
-        <td><%= link_to "Delete", recipient, method: :delete, data: { confirm: "Are you sure?" } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
- 
-<br>
- 
-<%= link_to "New Recipient", new_recipient_path %>
+    <li class="table-row">
+      <div class="col2 col-1" data-label="Job Id"><%= recipient.name %></div>
+      <div class="col2 col-2" data-label="Customer Name"><%= recipient.phone %></div>
+      <div class="col2 col-3" data-label="Amount"><%= link_to "View", recipient %></div>
+      <div class="col2 col-4" data-label="Payment Status"><%= link_to "Edit", edit_recipient_path(recipient) %></div>
+      <div class="col2 col-4" data-label="Payment Status"><%= link_to "Delete", recipient, method: :delete, data: { confirm: "Are you sure?" } %></div>
+    </li>
+  <% end %>
+  <%= link_to "New Recipient", new_recipient_path %>
+  </ul>
+
+</div>
