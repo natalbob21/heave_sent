@@ -14,11 +14,12 @@
 
 <% end %>
 
-
+<% if @event.video.present? %>
 <%= video_tag @event.video_url.to_s, controls: true  %>
+<% end %>
 
 
-<h2>You have successfully created an Event<br>Your message will be sent to <%= link_to @event.recipient.name, @event.recipient %> on <%= @event.send_date %></h2>
+<h2>Your message will be sent to <%= link_to @event.recipient.name, @event.recipient %> on <%= @event.send_date %></h2>
 
 <tr>
   <td><%= @event.id %></td><br>
