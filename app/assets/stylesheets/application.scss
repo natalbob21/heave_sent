@@ -90,6 +90,28 @@ form {
   justify-content: space-between;
 }
 
+.postcard {
+  background-image: url(post.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  height: 100vh;
+}
+.post {
+  display: inline-block;
+  margin-top: 90px;
+  position: relative;
+}
+
+.post a {
+  color: yellow;
+}
+
+.post a:hover {
+  font-size: 28px;
+}
 ///////////////////////////////////////////////////////////////////////////////
 //RECIPIENT Forms
 
@@ -310,7 +332,7 @@ article {
 }
 
 article#one{
-  background-image: url(message.jpg);
+  background-image: url(postcard.jpg);
   background-position: center;
   background-size: cover;
   border: 2px solid #b3ecff;

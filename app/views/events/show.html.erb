@@ -1,27 +1,36 @@
-<h1>
-  <%= @event.title %>
-</h1>
-<p>
-  <%= @event.description %>
-</p>
-<% if @event.message.attached? %>
+<div class="postcard">
+  <div class="post">
+    <h1>
+      <%= @event.title %>
+    </h1>
+    <p>
+      <%= @event.description %>
+    </p>
+    <% if @event.message.attached? %>
 
-  <p>
-    <strong>Message:</strong>
-    <br>
-    <%= image_tag @event.message %>
-  </p>
+      <p>
+        <strong>Message:</strong>
+        <br>
+        <%= image_tag @event.message, height: 420, width: 580 %>
+      </p>
 
-<% end %>
+    <% end %>
 
-<% if @event.video.present? %>
-<%= video_tag @event.video_url.to_s, controls: true  %>
-<% end %>
+    <% if @event.video.present? %>
+    <%= video_tag @event.video_url.to_s, controls: true  %>
+    <% end %>
 
 
-<h2>Your message will be sent to <%= link_to @event.recipient.name, @event.recipient %> on <%= @event.send_date %></h2>
+    <h2>Your message will be sent to <%= link_to @event.recipient.name, @event.recipient %> on <%= @event.send_date %></h2>
+    <%= link_to "Back", root_path %>
+    <%= link_to "Edit", edit_event_path %>
+    <%= link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" } %>
 
-<tr>
+
+  </div>
+</div>
+
+<!-- <tr>
   <td><%= @event.id %></td><br>
   <td><%= @event.send_date %></td><br>
   <td><%= @event.created_at %></td><br>
@@ -30,4 +39,4 @@
     <%= link_to "Edit", edit_event_path %>
     <%= link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" } %>
   </td>
-</tr>
+</tr> -->
