@@ -20,8 +20,7 @@
     <%= video_tag @event.video_url.to_s, controls: true  %>
     <% end %>
 
-
-    <h3>Your message will be sent to <%= link_to @event.recipient.name, @event.recipient %> on <%= @event.send_date %></h3>
+    <h3>Your message will be sent to <%= link_to @event.recipient.name, @event.recipient %> on <%= @event.send_date.strftime("%m-%d-%Y") %></h3>
     <%= link_to "Back", root_path %>
     <%= link_to "Edit", edit_event_path %>
     <%= link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" } %>
