@@ -1,3 +1,6 @@
+<body class="EventBackgroundFull">
+  <div class="eventBackground">
+    <div class="container-one">
 <div class="container center_div">
   <h2>Log in</h2>
 
@@ -13,10 +16,13 @@
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Log in" %>
+    <div class="form-inputs">
+      <%= f.button :submit, "Log in", class: "btn-group btn-group-justified" %>
     </div>
   <% end %>
 
   <%= render "devise/shared/links" %>
 </div>
+</div>
+</div>
+</body>>
