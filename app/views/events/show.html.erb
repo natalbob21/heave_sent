@@ -21,7 +21,7 @@
     <% end %>
 
 
-    <h2>Your message will be sent to <%= link_to @event.recipient.name, @event.recipient %> on <%= @event.send_date %></h2>
+    <h2>Your message will be sent to <%= link_to @event.recipient.name, @event.recipient %> on <%= @event.send_date.strftime("%m-%d-%Y") %></h2>
     <%= link_to "Back", root_path %>
     <%= link_to "Edit", edit_event_path %>
     <%= link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?" } %>

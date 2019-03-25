@@ -38,7 +38,7 @@ class RecipientsController < ApplicationController
 
   def destroy
     @recipient.destroy
-    redirect_to root_path
+    redirect_to recipients_path
   end
 
   private
