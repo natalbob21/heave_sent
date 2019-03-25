@@ -23,7 +23,8 @@
   <div class="form-inputs">
       <%= f.input :title, input_html: { class: 'form-control' } %>
       <%= f.input :description, input_html: { class: 'form-control'} %>
-      <%= f.association :recipient %>
+      <%= f.label :recipients %>
+      <%= f.select :recipient, current_user.recipients.map{ |r| [ r.name, r.id ] } %>
       <%= f.input :send_date, as: :date, html5: true %>
       <%= f.label "video" %>
       <%= f.file_field :video %>
