@@ -33,7 +33,7 @@ body {
   display: grid;
 }
 .people{
-  background: url(rece.png) no-repeat center center fixed;
+  background: url(<%= asset_path('rece.png') %>) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -74,7 +74,7 @@ li a:hover {
 
 // Forms
 .EventBackgroundFull{
-  background: url(background.png) no-repeat center center fixed;
+  background: url(<%= asset_path('<%= asse't %>)_path('background.png') %>) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -139,7 +139,7 @@ form {
 }
 
 .postcard {
-  background-image: url(post.png);
+  background-image: url(<%= asset_path('post.png') %>);
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;
@@ -253,14 +253,14 @@ form {
 
 // Timeline Styles
 .Timeline{
-  background: url(paper.png) no-repeat center center fixed;
+  background: url(<%= asset_path('paper.png')%>) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
 }
 .plane{
-  background: url(Heaven-set-plane.png)
+  background: url(<%= asset_path('Heaven-set-plane.png')%>)
 }
 main-timeline-section {
   position: relative;
@@ -389,7 +389,7 @@ article {
 }
 
 article#one{
-  background-image: url(postcard2.png);
+  background-image: url(<%= asset_path('postcard2.png')%>);
   background-position: center;
   background-size: cover;
   border: 2px solid #b3ecff;
@@ -593,7 +593,7 @@ a.sign {
   perspective: 1000px;
 }
 .front {
-  background-image: url(heaven-sent.png);
+  background-image: url(<%= asset_path('heaven-sent.png')%>);
   width: 95%;
 }
 
